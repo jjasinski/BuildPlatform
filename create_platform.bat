@@ -1,0 +1,12 @@
+echo off
+
+SET SANDBOX=%CD%
+SET TOOLS_PATH=%SANDBOX%/tools
+SET CMAKE_VERSION=cmake-3.0.2-win32-x86
+SET PATH=%PATH%;%TOOLS_PATH%
+
+if exist "%TOOLS_PATH%\cmake" rmdir /q /s "%TOOLS_PATH%\cmake"
+if exist "%TOOLS_PATH%\%CMAKE_VERSION%" rmdir /q /s "%TOOLS_PATH%\%CMAKE_VERSION%"
+
+7z.exe x -o%TOOLS_PATH% %TOOLS_PATH%/%CMAKE_VERSION%.zip
+move /Y %TOOLS_PATH%\%CMAKE_VERSION% %TOOLS_PATH%\cmake
