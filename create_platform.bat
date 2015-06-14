@@ -1,4 +1,4 @@
-echo ON
+echo OFF
 
 SET SANDBOX=%CD%
 SET TOOLS_PATH=%SANDBOX%\tools
