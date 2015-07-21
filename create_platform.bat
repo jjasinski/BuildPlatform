@@ -3,7 +3,7 @@ echo OFF
 SET SANDBOX=%CD%
 SET TOOLS_PATH=%SANDBOX%\tools
 SET ZIP_PATH=%TOOLS_PATH%\7-zip
-SET CMAKE_VERSION=cmake-3.0.2-win32-x86
+SET CMAKE_VERSION=cmake-3.2.3-win32-x86
 SET PATH=%ZIP_PATH%;%PATH%
 
 if exist "%TOOLS_PATH%\cmake" rmdir /q /s "%TOOLS_PATH%\cmake"
